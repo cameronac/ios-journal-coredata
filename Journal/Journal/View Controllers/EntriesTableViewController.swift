@@ -96,7 +96,7 @@ class EntriesTableViewController: UITableViewController {
         if identifier == "editSegue" {
             if let detailVC = segue.destination as? ShowEntryViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
-                //detailVC.entry = fetchedResultsController.object(at: indexPath)
+                detailVC.entry = fetchedResultsController.object(at: indexPath)
             }
         }
     }

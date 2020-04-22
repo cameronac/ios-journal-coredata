@@ -205,7 +205,7 @@
         <!--Add Journal Entry-->
         <scene sceneID="8H0-2E-xnm">
             <objects>
-                <viewController id="kxR-ib-cM0" customClass="CreateEntryViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kxR-ib-cM0" customClass="ShowEntryViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bE7-QG-lHH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,15 +261,20 @@
                     <navigationItem key="navigationItem" title="Add Journal Entry" id="Duv-uz-vXo">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Fcb-q8-uF2">
                             <connections>
-                                <action selector="cancelButtonPressed:" destination="kxR-ib-cM0" id="pDb-BF-GKm"/>
+                                <action selector="cancelButtonPressed:" destination="kxR-ib-cM0" id="Q3E-4m-cCt"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="fBL-qm-Z22">
                             <connections>
-                                <action selector="saveButtonPressed:" destination="kxR-ib-cM0" id="QpC-vu-omN"/>
+                                <action selector="editButtonPressed:" destination="kxR-ib-cM0" id="P2q-aR-QVS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControlMood" destination="Yqx-vl-hQi" id="9lb-UV-kZA"/>
+                        <outlet property="textFieldTitle" destination="s0T-Dc-thd" id="XPb-aJ-mgo"/>
+                        <outlet property="textView" destination="oTN-jb-bb6" id="wmh-2M-wWz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21R-YX-TDp" sceneMemberID="firstResponder"/>
             </objects>
